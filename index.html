@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matatu Culture Kenya - Poa Ride Sana!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <div class="container">
+        <header>
+            <h1>🎵 Matatu Culture Kenya 🚌</h1>
+            <p>Experience the vibrant world of Kenyan public transport - from flashy designs to booming music!</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#matatus" class="nav-link">Best Matatus</a></li>
+                <li><a href="#events" class="nav-link">Events</a></li>
+                <li><a href="#learning" class="nav-link">Learn</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Part 1: JavaScript Event Handling -->
+        <section id="event-handling">
+            <h2>🎉 Matatu Experience Simulator</h2>
+            <p>Interact with elements to get a feel of the matatu culture!</p>
+            
+            <div class="event-demo">
+                <div class="event-box">
+                    <h3>Matatu Horn</h3>
+                    <p>Press the button to hear the classic matatu horn</p>
+                    <button class="btn" id="clickBtn">Press Horn! 🚨</button>
+                    <p id="clickMessage"></p>
+                </div>
+                
+                <div class="event-box">
+                    <h3>Matatu Decoration</h3>
+                    <p>Hover over and click to customize this matatu</p>
+                    <div class="matatu-box" id="colorBox">
+                        <div class="matatu-window"></div>
+                        <div class="matatu-body"></div>
+                    </div>
+                    <p id="mouseStatus">Hover or click to customize</p>
+                </div>
+                
+                <div class="event-box">
+                    <h3>Matatu Route Search</h3>
+                    <p>Type a Nairobi route to search</p>
+                    <input type="text" id="keyInput" placeholder="e.g. Westlands, Kawangware">
+                    <div class="key-display" id="keyDisplay">Route: Not selected</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 2: Interactive Elements -->
+        <section id="interactive-elements">
+            <h2>🎮 Matatu Interactive Features</h2>
+            <p>Explore different aspects of matatu culture through these interactive elements.</p>
+            
+            <div class="interactive-grid">
+                <!-- Fare Counter -->
+                <div class="interactive-item">
+                    <h3>Fare Calculator</h3>
+                    <p>Calculate your matatu fare based on distance</p>
+                    <div class="counter-display" id="counterValue">KSh 0</div>
+                    <div class="counter-controls">
+                        <button class="btn" id="decrementBtn">-5 km</button>
+                        <button class="btn" id="resetBtn">Reset</button>
+                        <button class="btn" id="incrementBtn">+5 km</button>
+                    </div>
+                    <p class="fare-note">Base fare: KSh 50 for first 5km, then KSh 10 per km</p>
+                </div>
+                
+                <!-- Matatu FAQ Section -->
+                <div class="interactive-item">
+                    <h3>Matatu FAQ</h3>
+                    <p>Common questions about matatu culture</p>
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Why are matatus so colorful?</span>
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Matatus are colorful to attract customers and express the owner's style. The designs often feature celebrities, slogans, or religious themes.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>What does "Manamba" mean?</span>
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Manamba is the term for the conductor who collects fares and calls out routes. They're known for their energetic style and catchy phrases.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Are matatus safe?</span>
+                                <span>+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Modern matatus are generally safe with regulated speed governors. However, it's always important to be cautious and use reputable companies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Matatu Types Tabs -->
+                <div class="interactive-item">
+                    <h3>Types of Matatus</h3>
+                    <p>Learn about different matatu styles in Kenya</p>
+                    <div class="tab-container">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="tab1">Nissan</button>
+                            <button class="tab-btn" data-tab="tab2">Toyota</button>
+                            <button class="tab-btn" data-tab="tab3">Modern</button>
+                        </div>
+                        <div class="tab-content active" id="tab1">
+                            <h4>Nissan Matatus</h4>
+                            <p>The classic Nissan Urvan (14-seater) is the most common matatu. Known for reliability and spaciousness.</p>
+                            <div class="matatu-image nissan"></div>
+                        </div>
+                        <div class="tab-content" id="tab2">
+                            <h4>Toyota Matatus</h4>
+                            <p>Toyota Hiace and Noah models are popular for longer routes. They're comfortable and fuel-efficient.</p>
+                            <div class="matatu-image toyota"></div>
+                        </div>
+                        <div class="tab-content" id="tab3">
+                            <h4>Modern Matatus</h4>
+                            <p>Newer models like the Isuzu NPR and Mercedes Sprinter offer more capacity and modern amenities.</p>
+                            <div class="matatu-image modern"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part 3: Form Validation -->
+        <section id="form-validation">
+            <h2>📋✅ Join the Matatu Community</h2>
+            <p>Sign up for our matatu culture newsletter and events!</p>
+            
+            <form id="validationForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your full name">
+                    <div class="error" id="nameError">Name must be at least 2 characters long</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <div class="error" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">Your Location in Kenya</label>
+                    <input type="text" id="location" placeholder="e.g. Nairobi, Mombasa, Kisumu">
+                    <div class="error" id="locationError">Please enter your location</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <div class="error" id="passwordError">Password must be at least 8 characters with letters and numbers</div>
+                </div>
+                
+                <button type="submit" class="btn">Sign Up Now</button>
+                
+                <div class="form-feedback success" id="successMessage">
+                    Karibu! Welcome to the matatu community. You'll receive updates on events and news.
+                </div>
+                
+                <div class="form-feedback error" id="errorMessage">
+                    Please fix the errors above before submitting the form.
+                </div>
+            </form>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>📸 Matatu Gallery</h2>
+            <p>Check out some of the most creative matatus on Kenyan roads</p>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-color: #ff6b6b;"></div>
+                <div class="gallery-item" style="background-color: #4ecdc4;"></div>
+                <div class="gallery-item" style="background-color: #45b7d1;"></div>
+                <div class="gallery-item" style="background-color: #96ceb4;"></div>
+                <div class="gallery-item" style="background-color: #feca57;"></div>
+                <div class="gallery-item" style="background-color: #ff9ff3;"></div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2023 Matatu Culture Kenya | Poa Ride Sana! 🎵</p>
+            <p>Website celebrating the vibrant matatu culture of Kenya</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
